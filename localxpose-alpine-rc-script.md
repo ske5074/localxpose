@@ -1,6 +1,6 @@
 # Setup rc startup script for Alpine Linux
 
-Alpine Linux is a great lightweight Linux distribution to run web servers on. Use the steps below to create an `rc` startup script to start your tunnels easily:
+Alpine Linux is a great lightweight Linux distribution to run web servers on. Use the steps below to create an `rc` startup script to start your tunnels automatically on boot:
 
 ## Steps (Run as root)
 
