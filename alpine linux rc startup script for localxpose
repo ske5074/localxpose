@@ -1,0 +1,34 @@
+# Setup rc statup script for alpine linux
+alpine linux is a great lightweight linus distribution to run web servers on.  Use the below steps to create a rc startup script to startup your tunnels easily:
+
+## Steps:
+
+ 1. Install loclx on the system and cp it to /usr/local/sbin
+     cp loclx /usr/local/sbin
+     chmod 755 /usr/local/sbin/loclx
+2. Create a /etc/localexpose directory and put the config.yaml file there.  The following will create an example [config.yaml](https://localxpose.io/docs/cli/config.yaml)
+
+    # mkdir /etc/localxpose
+    # chmod 750 /etc/localxpose
+    # cat > /etc/localxpose/config.yaml << EOF
+    webexample:
+      type: http
+      region: us
+      reserved_domain: www.example.com
+      to: localhost:8080
+      plugins:
+        https_redirect: true
+        request_header:
+          - host:www.example.com
+          - X-Token:secureToken
+    minecraft:
+      type: udp
+      region: us
+      reserved_endpoint: us.loclx.io:31969
+      to: 10.0.112.9:19132
+
+
+    # cp loclx /usr/local/sbin
+    # chmod 755 /usr/local/sbin/loclx
+    # mkdir /etc/localxpose
+    # cat > /etc/localxpose/config.yaml << EOF
