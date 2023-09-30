@@ -5,20 +5,20 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
 ## Steps (Run as root)
 
 1. **Install loclx on the system and copy it to `/usr/local/sbin`**
-    ```bash
+    ```sh
     cp loclx /usr/local/sbin
     chmod 755 /usr/local/sbin/loclx
     ```
 
 2. **Create an `/etc/localxpose` directory and place the `config.yaml` file there**
-    ```bash
+    ```sh
     mkdir /etc/localxpose
     chmod 750 /etc/localxpose
     ```
 
 3. **Create a `config.yaml` file**  
    Example sections are available [here](https://localxpose.io/docs/cli/config.yaml).
-    ```bash
+    ```sh
     cat > /etc/localxpose/config.yaml << EOF
     webexample:
       type: http
@@ -39,7 +39,7 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
     ```
 
 4. **Create the `rc` script**
-    ```bash
+    ```sh
     cat > /etc/init.d/localxpose << EOF
     #!/sbin/openrc-run
     
@@ -74,14 +74,12 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
     ```
 
 5. **Make the script executable**
-    ```bash
+    ```sh
     chmod 755 /etc/init.d/localxpose
     ```
 
 6. **Add the service to the default runlevel and start it**
-    ```bash
+    ```sh
     rc-update add localxpose default
     rc-service localxpose start
     ```
-
-Save the content in the Markdown format, and when viewed in platforms that support Markdown rendering (like GitHub, GitLab, Bitbucket, etc.), it'll display as formatted text.
