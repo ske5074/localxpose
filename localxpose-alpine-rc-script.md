@@ -51,7 +51,7 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
     retry="30"
     
     start_pre() {
-        checkpath --directory --owner root:root --mode 0755 "$(dirname $pidfile)"
+        checkpath --directory --owner root:root --mode 0755 "`dirname $pidfile`"
     }
     
     depend() {
