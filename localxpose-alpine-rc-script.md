@@ -42,8 +42,9 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
     ```sh
     nano /etc/init.d/localxpose
     ```
-5. ** Copy the rc code here into the file **
-    ```rc
+
+5. **Copy the rc code here into the file **
+    ```openrc-run
     #!/sbin/openrc-run
     
     name="localXpose Tunneling Service"
@@ -73,7 +74,6 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
         start-stop-daemon --stop --pidfile $pidfile
         eend $?
     }
-    EOF
     ```
 
 6. **Make the rc script executable**
