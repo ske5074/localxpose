@@ -39,6 +39,10 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
     ```
 
 4. **Create the `rc` script using your favorite editor (nano, vi)**
+    ```sh
+    nano /etc/init.d/localxpose
+    ```
+5. ** Copy the rc code here into the file **
     ```rc
     #!/sbin/openrc-run
     
@@ -72,12 +76,12 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
     EOF
     ```
 
-5. **Make the rc script executable**
+6. **Make the rc script executable**
     ```sh
     chmod 755 /etc/init.d/localxpose
     ```
 
-6. **Add the service to the default runlevel and start it**
+7. **Add the service to the default runlevel and start it**
     ```sh
     rc-update add localxpose default
     rc-service localxpose start
