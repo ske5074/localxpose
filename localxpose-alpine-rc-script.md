@@ -42,8 +42,7 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
     ```sh
     nano /etc/init.d/localxpose
     ```
-
-5. **Copy the rc code here into the file **
+5. **Copy the `rc` code here into the file**
     ```sh
     #!/sbin/openrc-run
     
