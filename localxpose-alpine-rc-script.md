@@ -6,8 +6,8 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
 
 1. **Install loclx on the system and copy it to `/usr/local/sbin`**
     ```sh
-    cp loclx /usr/local/sbin
-    chmod 755 /usr/local/sbin/loclx
+    cp loclx /usr/sbin/
+    chmod 755 /usr/sbin/loclx
     ```
 
 2. **Create an `/etc/localxpose` directory and place the `config.yaml` file there**
@@ -48,7 +48,7 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
     
     name="localXpose Tunneling Service"
     description="Runs localXpose loclx and restarts it if it stops."
-    command="/usr/local/sbin/loclx tunnel config -f /etc/localxpose/config.yaml"
+    command="/usr/sbin/loclx tunnel config -f /etc/localxpose/config.yaml"
     command_background="yes"
     pidfile="/var/run/$RC_SVCNAME.pid"
     retry="30"
