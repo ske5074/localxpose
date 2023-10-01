@@ -44,7 +44,7 @@ Alpine Linux is a great lightweight Linux distribution to run web servers on. Us
     ```
 
 5. **Copy the rc code here into the file **
-    ```openrc-run
+    ```sh
     #!/sbin/openrc-run
     
     name="localXpose Tunneling Service"
